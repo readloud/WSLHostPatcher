@@ -1,37 +1,38 @@
 1. INSTALL [WSL 2](https://aka.ms/PSWindows)
 
-*Upgrade WSL to latest vesion*
+  - Upgrade WSL to latest vesion
 ~~~
 iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"
 ~~~
 
-*RUN POWERSHELL as administrator*
+  - RUN POWERSHELL as administrator
 ~~~
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ~~~
 
-*RESTART
+  - RESTART
 ~~~
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ~~~
 
-*CHECK VERSION *
+  - CHECK VERSION
 ~~~
 systeminfo | find "System Type"
 wsl --list --verbose
 ~~~
 
-*SET DEFAULT TO WSL 2*
+  - SET DEFAULT TO WSL 2
 ~~~
 wsl --set-default-version 2
 ~~~
+
 2. INSTALL GUI
 ~~~
 wsl --install -d kali-linux
 ~~~
 
-*SET PASSWORD & USERNAME (OPTIONAL)*
+  - SET PASSWORD & USERNAME (OPTIONAL)
 ~~~
 wsl -d kali-linux -u username
 passwd root
@@ -61,7 +62,7 @@ sudo apt install xrdp -y
 sudo service xrdp start
 ~~~
 
-*Optional*
+  - Optional Installation
 ~~~
 docker pull kalilinux/kali-rolling
 docker run --tty --interactive kalilinux/kali-rolling /bin/bash
@@ -76,7 +77,7 @@ lxrun/set default user root
 https://github.com/belherdigital/documentation-oe.git
 ~~~
 
-*Optional Configuration*
+  - Optional Configuration
 
 `/etc/ssl/openssl.cnf`
 `/etc/ssl/kali.cnf`
@@ -89,7 +90,7 @@ https://github.com/belherdigital/documentation-oe.git
 sudo systemctl disable regenerate-ssh-host-keys.service
 ~~~
 
-*Optional addition*
+  - Optional Addition
 ~~~
 /etc/apt/sources.list
 grep -v '#' /etc/apt/sources.list | sort -u
@@ -99,7 +100,7 @@ echo "deb http://http.kali.org/kali kali-experimental main contrib non-free" | s
 echo "deb http://http.kali.org/kali kali-bleeding-edge main contrib non-free" | sudo tee /etc/apt/sources.list.d/kali-bleeding-edge.list
 ~~~
 
-*Remove Optional addition*
+  - Remove Optional addition
 ~~~
 sudo rm /etc/apt/sources.list.d/kali-experimental.list
 sudo rm /etc/apt/sources.list.d/kali-bleeding-edge.list
