@@ -49,7 +49,7 @@ sudo apt install kali-desktop-xfce -y
 sudo apt install -y kali-linux-large
 sudo apt-get install kali-linux-default
 ~~~
-or
+  - or
 ~~~
 wget https://gitlab.com/kalilinux/build-scripts/kali-wsl-chroot/-/raw/master/xfce4.sh
 chmod+x xfce4.sh
@@ -78,14 +78,14 @@ https://github.com/belherdigital/documentation-oe.git
 ~~~
 
   - Optional Configuration
-
-`/etc/ssl/openssl.cnf`
-`/etc/ssl/kali.cnf`
-`/etc/samba/smb.conf`
-`/etc/ssh/ssh_config.d/kali-wide-compat.conf`
-`regenerate-ssh-host-keys`
-`/etc/ssh`
-
+~~~
+- /etc/ssl/openssl.cnf
+- /etc/ssl/kali.cnf
+- /etc/samba/smb.conf
+- /etc/ssh/ssh_config.d/kali-wide-compat.conf
+- regenerate-ssh-host-keys
+- /etc/ssh
+~~~
 ~~~
 sudo systemctl disable regenerate-ssh-host-keys.service
 ~~~
