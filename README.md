@@ -68,5 +68,5 @@ wsl -s YOUR_DISTRO
 On import the distro will be registered with the current default WSL version. You can set your default WSL version with `wsl --set-default-version <Version>`.
 When the WSL version was accidentally changed while moving, you can set the version with `wsl --set-version <Distro> <Version>`.
 
-[Install KALI-LINUX](/Install KALI-LINUX.md)
+[Install KALI-LINUX](Install%20KALI-LINUX.md)
 
